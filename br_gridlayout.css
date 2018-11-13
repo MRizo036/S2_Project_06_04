@@ -1,0 +1,29 @@
+@charset "utf-8";
+div.row{
+    clear: both;
+}
+
+div.row::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+div[class^="col-"] {
+    object-fit: cover;
+    float: left;
+}
+div.col-1-1{
+    width: 100%;
+}
+
+div.col-2-10{
+    width: 20%;
+}
+
+div.col-8-10{
+    width: 80%;
+}
+div.col-8-3{
+    width: 33%
+}
