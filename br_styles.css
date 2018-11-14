@@ -14,11 +14,12 @@
 */
 
 /* General Styles */
-html{
+html {
     background: linear-gradient(rgb(14, 167, 178), #A3D9FF) fixed;
     height: 100%;
 }
-body{
+
+body {
     background-color: #FCFCFC;
     box-shadow: 20px 20px 60px rgba(36, 31, 31, 0.747), -20px 20px 60px rgba(36, 31, 31, 0.747);
     margin-left: auto;
@@ -26,19 +27,31 @@ body{
     width: 80%;
 }
 
-header img{
+header img {
     align-content: center;
 }
 
-h1{
+h1 {
     text-align: center;
     font-size: 20px;
     padding: 10px 0px;
 }
-p{
-    margin-left: 15px
+
+p {
+    margin-left: 15px;
+    padding-bottom: 10px;
 }
+
+figcaption {
+    text-align: center;
+    padding: 10px 0px
+}
+
 /* Navigation Styles */
+nav.hnav a:hover {
+    background-color: rgba(4, 22, 32, 0.63);
+}
+
 nav.hnav a {
     background-color: rgb(4, 22, 32);
     color: white;
@@ -46,20 +59,39 @@ nav.hnav a {
     float: left;
     display: block;
     text-align: center;
+    padding: 10px 0px;
 }
+
+/* Address Styles */
+address {
+    background-image: url(br_paper.png);
+    text-align: center;
+    padding: 10px 10px;
+
+}
+
 /* Table Styles */
 table {
     border: 1px solid black;
     border-radius: 10px;
-    margin-left: 15px;
+    width: 100%;
 }
-th{
-    text-align: left;
 
+th:nth-child(even) {
+    background-color: #A3D9FF;
 }
+
+th {
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 /* Footer Styles */
-footer{
+footer {
     background-color: rgb(4, 22, 32);
     color: white;
-    text-align: center
+    padding: 10px 0px;
+    text-align: center;
 }
