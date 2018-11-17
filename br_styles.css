@@ -22,6 +22,7 @@ html {
 body {
     background-color: #FCFCFC;
     box-shadow: 20px 20px 60px rgba(36, 31, 31, 0.747), -20px 20px 60px rgba(36, 31, 31, 0.747);
+    font-family: Arial, Helvetica, sans-serif;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -31,6 +32,7 @@ header>img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    filter: brightness(2)
 }
 
 header h1 {
@@ -38,17 +40,22 @@ header h1 {
     font-size: 30px;
     padding: 10px 0px;
     margin-top: 20px;
+    text-shadow: 5px 5px 9px rgba(36, 31, 31, 0.747);
 }
 
 p {
     margin-left: 15px;
     padding: 10px 0px;
     line-height: 24px;
+    font-size: 20px;
 }
 
 figure {
     border: 2px solid black;
     padding-top: 10px;
+    background-color: #A3D9FF;
+    font-weight: bold;
+
 }
 
 figcaption {
@@ -82,17 +89,22 @@ nav.hnav a:hover {
 }
 
 nav.snav {
-    background-color: rgb(4, 22, 32);
-
+    background: radial-gradient(rgba(4, 22, 32, 0.418), rgba(4, 22, 32, 0.925));
+    padding: 10px;
     width: 90%;
     margin-left: 10px;
-    border: 1px solid
+    border: 1px solid;
+    border-radius: 25px
 }
 
 nav.snav a {
     color: white;
     margin-left: 10px;
-    font-style: italic
+    line-height: 50px;
+}
+
+nav.snav li:hover {
+    font-style: italic;
 }
 
 /* Address Styles */
@@ -105,7 +117,7 @@ address {
 /* Table Styles */
 table {
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 25px;
     width: 90%;
     display: block;
     margin-left: 10px;
