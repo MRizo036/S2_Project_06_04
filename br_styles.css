@@ -14,11 +14,14 @@
 */
 
 /* General Styles */
+/* Styles within this section will affect general elements within the HTML document that affect mutiple aspects of the page. */
+/* The selector below states that the html element will have a background of the specified image and will stretch to the height of the entire page.   */
 html {
     background: url(br_paper.png);
     height: 100%;
 }
 
+/* The selector states that the body element will have a background of the specified color, a boxshadow of the dimensions listed, and text within will be od the specified font. Along with that, the margin left and right property horizontally align the body element to the center of the page while the width property states that the body will be 80% of the pages width. */
 body {
     background-color: #FCFCFC;
     box-shadow: 20px 20px 60px rgba(36, 31, 31, 0.747), -20px 20px 60px rgba(36, 31, 31, 0.747);
@@ -28,51 +31,37 @@ body {
     width: 80%;
 }
 
+/* The selector states that the p elements of the HTML document will be affected by the styles listed. The font size property states how large to text should appear on the page. The margin property applied a margin around the element of the specified size. The padding property serves a similar functin except that it adds paddig around the element. The line height property provides a space inbetween each line of text of the dimension specified.  */
+p {
+    font-size: 20px;
+    margin: 0px 20px;
+    padding: 13px 0px;
+    line-height: 24px;
+}
+
+/* Header Styles */
+/* Styles within this section will affect the header elements in the HTML document along with any other elements nested within the header that are not the nav. */
+/* The selector states that the img that is a child of the header element will be dislyed with the properties of a block level element while being centered in its container as specified by the margin left and riht properties. The filter property applies the specified filters to the image, in this case applying a brightness of 2. */
 header>img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    filter: brightness(2)
+    -webkit-filter: brightness(2);
+    filter: brightness(2);
 }
 
+/* The selector below states that the h1 element nested within the header element will be affected by the styles listed. The text align property aligns the text in the center of its container. The text shadow property applies a  shadow behind the text of the specified dimensions adnd color. */
 header h1 {
     text-align: center;
     font-size: 30px;
-    padding: 10px 0px;
+    padding: 15px 0px;
     margin-top: 20px;
     text-shadow: 5px 5px 9px rgba(36, 31, 31, 0.747);
 }
 
-p {
-    margin-left: 15px;
-    padding: 10px 0px;
-    line-height: 24px;
-    font-size: 20px;
-}
-
-figure {
-    border: 2px solid black;
-    padding-top: 10px;
-    background-color: #A3D9FF;
-    font-weight: bold;
-
-}
-
-figcaption {
-    text-align: center;
-    padding: 10px 0px;
-}
-
-div.col-8-3 img {
-    height: 100%;
-    width: 95%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /* Navigation Styles */
-
+/* Styles within this section will affect the horizontal navigation of the webpage. */
+/* The selector states that the a element nested within the nav element with a class of hnav will be affected. The background color property sets the color of the elements background while the color property sets the text color. The width property specifies the width of each element on the page. The float left property floats each of the elements to the left of their container. The border property applied a boder of the specified width and color around the element.  */
 nav.hnav a {
     background-color: rgb(4, 22, 32);
     color: white;
@@ -82,39 +71,80 @@ nav.hnav a {
     text-align: center;
     padding: 10px 0px;
     border: 1px solid rgba(255, 255, 255, 0.664);
+
 }
 
+/* The selector below states that the a element nested within the nav element with a class of hnav will be affected when in the state of hover as specified by the psuedo element. */
 nav.hnav a:hover {
     background-color: rgba(4, 22, 32, 0.63);
+
 }
 
+/* Address Styles */
+/* Styles within this section will affect the address element in the HTML document. */
+/* The selector below states that the address element will be affected by the styles listed. The font weigth element changes the thickness of the font, in this case making the font bold. */
+address {
+    text-align: center;
+    padding: 10px 10px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* Figure Styles */
+/* Styles within this section will affect the figure element in the HTML document as well as any elements nested within. */
+/* The selector states that listed properties will be applied to the figure element. The background linear gradient property creates a linear gradient that trasitions from the first specified color to the next.*/
+figure {
+    background: linear-gradient(rgb(153, 187, 211) 70%, white);
+    border: 1px solid black;
+    padding-top: 8px;
+    font-weight: bold;
+}
+
+/* The selector states that the figcaption element will have the properties listed applied to it. The transfom property and rotateX attribute listed within rotate the element by the specified measure along its x axis, in this case by 40 degrees. */
+figcaption {
+    font-size: 22px;
+    text-align: center;
+    padding: 10px 0px;
+    transform: rotateX(40deg);
+    text-shadow: 0px 4px 6px;
+}
+
+/* The selector states that the img nested within the div element with a class fo col-8-3 will be affected by the styles listed.  */
+div.col-8-3 img {
+    height: 100%;
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Side Navigation Styles */
+/* Styles within this section will affect the side navigation of the webpage identified by the class of snav. */
+/* The selector states that nav element with a class of snav will have the properties listed applied to it. The bakground radial gradient property applied a radial gradient at the center of the elememt that transitions from the first specified color to the next. The border radius property rounds the borders of the element by the pixel measurement stated. */
 nav.snav {
-    background: radial-gradient(rgba(4, 22, 32, 0.418), rgba(4, 22, 32, 0.925));
+    background: radial-gradient(rgba(8, 36, 51, 0.418), rgb(6, 45, 66));
     padding: 10px;
     width: 90%;
     margin-left: 10px;
-    border: 1px solid;
     border-radius: 25px
 }
 
+/* The selector below states that the a element nested within the nav element with a class of snav will be affected by the properties listed.  */
 nav.snav a {
     color: white;
     margin-left: 10px;
     line-height: 50px;
 }
 
-nav.snav li:hover {
+/* The selector states that the a element nested within the nav element with a class of snav will be affected by the property listde in the state of hover. The font style property affects the style of the text, in this case making the text italic. */
+nav.snav a:hover {
     font-style: italic;
 }
 
-/* Address Styles */
-address {
-    text-align: center;
-    padding: 10px 10px;
-
-}
-
 /* Table Styles */
+/* Styles within this section will affect the table element in the HTML document along with any elements nested inside. */
+/* The selector below applied the listed properties to the table element in the HTML document. */
 table {
     border: 1px solid black;
     border-radius: 25px;
@@ -123,23 +153,57 @@ table {
     margin-left: 10px;
 }
 
-th:nth-child(even) {
-    background-color: #A3D9FF;
+/* The selector states that the even numbered tr element withn the HTML document will be affected by the style listed. */
+tr:nth-child(even) {
+    background-color: white;
 }
 
-th {
+/* The coment above applies to this selector as well, the only difference being that now odd tr elements are being affected.  */
+tr:nth-child(odd) {
+    background-color: rgba(4, 22, 32, 0.904);
+    color: white
+}
+
+/* The td selector states that properties within will affect the td elements within the HTML document. */
+td {
     text-align: left;
-    padding-left: 5px;
+    padding-left: 10px;
+    padding-right: 18px;
     padding-top: 10px;
     padding-bottom: 10px;
+    border: 1px solid black;
+}
+
+/* The selctor states that the td element with the id of top left within the HTML document will be affected by the styles provides. The border top left radius property curves the top left corner of the element affected. This comment applied to the next three selectors as well, the only difference being the id of the td element and the corner being impacted by the styles. */
+td#topleft {
+    border-top-left-radius: 25px;
+}
+
+td#topright {
+    border-top-right-radius: 25px;
+}
+
+td#bottomleft {
+    border-bottom-left-radius: 25px;
+}
+
+td#bottomright {
+    border-bottom-right-radius: 25px;
+}
+
+/* The selctor states that the first td elements nested inside of the table element will be italic.  */
+table td:first-of-type {
+    font-style: italic;
 }
 
 /* Footer Styles */
+/* Styles within this section will affect the footer element of the HTML document. */
+/* The selector below state that properties listed will affect the the footer element within the HTML document.  */
 footer {
     background-color: rgb(4, 22, 32);
     color: white;
-    padding: 3px 0px;
+    font-style: italic;
     text-align: center;
+    padding: 10px;
+    font-size: 16px;
 }
-
-footer a {}

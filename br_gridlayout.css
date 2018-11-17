@@ -12,24 +12,33 @@
    Filename: br_gridlayout.css
 
 */
+/* Grid Row Styles */
+/* Styles within this secion will be applied to the rows of th page layout. */
+/* The selctor states that the div element with a class of row will have the listed properties applied to it. The clear property with a value of both states that the element will not be affected by any floating elements that may be present on the page. */
 div.row {
     clear: both;
 }
 
+/* The selector below states that the div element with a class of row will be affected. The after pseudo-element states that the selector is affecting the last child of the selected element. The properties listed within are used to prevent container collapse wtihin any of the div elements with a class of row.  */
 div.row::after {
     clear: both;
     content: "";
     display: table;
 }
 
+/* Grid Column Styles */
+/* Styles within this section will affect the grid columns within the page layout. */
+/* The selector states that all div elements with a class that begins with 'col-' will be affected by the styles listed. The float left property floats these elements to the left of their container. */
 div[class^="col-"] {
     float: left;
 }
 
+/* The selector below states that the div with a class of col-1-1 will be affected by the styles listed. The width property specified the width of the element on the page.  */
 div.col-1-1 {
     width: 100%;
 }
 
+/* The comment above applies to the rest of the styles below, the only difference being the class being affected and the width being applied. */
 div.col-2-10 {
     width: 20%;
 }
